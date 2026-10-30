@@ -1,0 +1,606 @@
+<!doctype html>
+<html lang="id">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Tapak Digital | Jasa Pembuatan Website Company Profile & UMKM</title>
+<meta name="description" content="Jasa pembuatan website company profile, landing page UMKM, dan toko online. Dikerjakan langsung oleh developer berpengalaman 5 tahun. Cepat, rapi, mobile-friendly, dan mudah ditemukan di Google.">
+<meta name="theme-color" content="#0f766e">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Tapak Digital | Jasa Website Company Profile & UMKM">
+<meta property="og:description" content="Website profesional untuk bisnis Anda. Cepat, mobile-friendly, siap tampil di Google. Konsultasi gratis via WhatsApp.">
+<link rel="icon" href="data:image/svg+xml,%3Csvg viewBox=%220 0 64 64%22 xmlns=%22http://www.w3.org/2000/svg%22%3E%3Crect width=%2264%22 height=%2264%22 rx=%2216%22 fill=%22%230f766e%22/%3E%3Cpath d=%22M14 50V40.5a2.5 2.5 0 0 1 2.5-2.5H26V30.5a2.5 2.5 0 0 1 2.5-2.5H38V20.5a2.5 2.5 0 0 1 2.5-2.5h7a2.5 2.5 0 0 1 2.5 2.5V50z%22 fill=%22%23fff%22/%3E%3Ccircle cx=%2220%22 cy=%2226%22 r=%224.5%22 fill=%22%23f59e0b%22/%3E%3C/svg%3E">
+<link rel="apple-touch-icon" href="logo/tapak-digital-icon-512.png">
+<meta property="og:image" content="https://tapak-digital.github.io/logo/tapak-digital-icon-512.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --bg: #ffffff;
+    --bg-soft: #f4f7f6;
+    --ink: #10201d;
+    --ink-soft: #4b5b58;
+    --line: #e2e9e7;
+    --brand: #0f766e;
+    --brand-dark: #0b5a54;
+    --brand-tint: #e6f4f1;
+    --accent: #f59e0b;
+    --radius: 16px;
+    --shadow: 0 10px 30px -12px rgba(16, 32, 29, .18);
+    --max: 1120px;
+  }
+  * { box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+  body {
+    margin: 0; background: var(--bg); color: var(--ink);
+    font-family: "Plus Jakarta Sans", system-ui, -apple-system, "Segoe UI", sans-serif;
+    font-size: 16px; line-height: 1.6; -webkit-font-smoothing: antialiased;
+  }
+  img { max-width: 100%; display: block; }
+  a { color: inherit; }
+  .wrap { max-width: var(--max); margin: 0 auto; padding: 0 20px; }
+  section { padding: 88px 0; }
+  .eyebrow { display: inline-block; font-size: 13px; font-weight: 700; letter-spacing: .08em; text-transform: uppercase; color: var(--brand); margin-bottom: 10px; }
+  h1, h2, h3 { line-height: 1.2; margin: 0 0 14px; letter-spacing: -.02em; }
+  h1 { font-size: clamp(34px, 5.4vw, 56px); font-weight: 800; }
+  h2 { font-size: clamp(28px, 3.6vw, 40px); font-weight: 800; }
+  h3 { font-size: 20px; font-weight: 700; }
+  p { margin: 0 0 14px; color: var(--ink-soft); }
+  .lead { font-size: 18px; max-width: 620px; }
+  .center { text-align: center; }
+  .center .lead { margin-left: auto; margin-right: auto; }
+
+  .btn {
+    display: inline-flex; align-items: center; justify-content: center; gap: 10px;
+    padding: 14px 24px; border-radius: 999px; font-weight: 700; font-size: 16px;
+    text-decoration: none; border: 2px solid transparent; transition: transform .15s, background .15s, box-shadow .15s;
+    cursor: pointer;
+  }
+  .btn:hover { transform: translateY(-2px); }
+  .btn-primary { background: var(--brand); color: #fff; box-shadow: 0 8px 20px -8px rgba(15,118,110,.6); }
+  .btn-primary:hover { background: var(--brand-dark); }
+  .btn-ghost { border-color: var(--line); color: var(--ink); background: #fff; }
+  .btn-ghost:hover { border-color: var(--brand); color: var(--brand); }
+  .btn svg { width: 20px; height: 20px; flex: none; }
+
+  /* Header */
+  header {
+    position: sticky; top: 0; z-index: 50; background: rgba(255,255,255,.88);
+    backdrop-filter: saturate(160%) blur(10px); border-bottom: 1px solid var(--line);
+  }
+  .nav { display: flex; align-items: center; justify-content: space-between; height: 68px; }
+  .logo { display: flex; align-items: center; gap: 10px; font-size: 21px; text-decoration: none; }
+  .logo-mark { width: 36px; height: 36px; display: block; flex: none; }
+  .logo-mark svg { width: 100%; height: 100%; display: block; }
+  .logo b { font-weight: 800; letter-spacing: -.02em; }
+  .logo b span { font-weight: 500; color: var(--brand); }
+  .nav-links { display: flex; align-items: center; gap: 28px; }
+  .nav-links a { text-decoration: none; font-weight: 600; font-size: 15px; color: var(--ink-soft); }
+  .nav-links a:hover { color: var(--brand); }
+  .nav-links .btn { padding: 10px 18px; font-size: 15px; color: #fff; }
+  .menu-btn { display: none; background: none; border: 0; padding: 8px; cursor: pointer; color: var(--ink); }
+  .menu-btn svg { width: 26px; height: 26px; }
+
+  /* Hero */
+  .hero { padding: 72px 0 88px; background: radial-gradient(1200px 500px at 85% -10%, var(--brand-tint), transparent 60%); }
+  .hero-grid { display: grid; grid-template-columns: 1.1fr .9fr; gap: 56px; align-items: center; }
+  .hero h1 em { font-style: normal; color: var(--brand); }
+  .hero-cta { display: flex; flex-wrap: wrap; gap: 12px; margin: 28px 0 26px; }
+  .hero-points { display: flex; flex-wrap: wrap; gap: 10px 22px; padding: 0; margin: 0; list-style: none; font-size: 15px; font-weight: 600; color: var(--ink-soft); }
+  .hero-points li { display: flex; align-items: center; gap: 8px; }
+  .hero-points svg { width: 18px; height: 18px; color: var(--brand); flex: none; }
+
+  .mock { position: relative; }
+  .browser { background: #fff; border-radius: 14px; box-shadow: var(--shadow), 0 0 0 1px var(--line); overflow: hidden; }
+  .browser-bar { display: flex; align-items: center; gap: 6px; padding: 10px 12px; background: var(--bg-soft); border-bottom: 1px solid var(--line); }
+  .browser-bar i { width: 10px; height: 10px; border-radius: 50%; background: #d4dcda; display: block; }
+  .browser-bar span { margin-left: 10px; font-size: 12px; color: var(--ink-soft); background: #fff; border-radius: 6px; padding: 3px 10px; flex: 1; }
+  .browser-body { padding: 20px; }
+  .sk { background: #e9efed; border-radius: 6px; height: 10px; margin-bottom: 8px; }
+  .sk-hero { height: 110px; border-radius: 10px; background: linear-gradient(135deg, var(--brand), #14b8a6); margin-bottom: 16px; display: flex; align-items: flex-end; padding: 14px; }
+  .sk-hero b { color: #fff; font-size: 15px; }
+  .sk-row { display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px; margin-top: 14px; }
+  .sk-card { border: 1px solid var(--line); border-radius: 8px; padding: 10px; }
+  .sk-card .sk:first-child { height: 34px; background: var(--brand-tint); }
+  .phone {
+    position: absolute; right: -14px; bottom: -34px; width: 132px; background: #fff; border-radius: 20px;
+    box-shadow: var(--shadow), 0 0 0 1px var(--line); padding: 14px 10px; border: 5px solid var(--ink);
+  }
+  .phone .sk-hero { height: 70px; padding: 8px; }
+  .phone .sk-hero b { font-size: 11px; }
+  .badge-float {
+    position: absolute; left: -18px; top: 26px; background: #fff; border-radius: 12px; padding: 10px 14px;
+    box-shadow: var(--shadow), 0 0 0 1px var(--line); font-size: 13px; font-weight: 700; display: flex; gap: 8px; align-items: center;
+  }
+  .badge-float .dot { width: 9px; height: 9px; border-radius: 50%; background: #22c55e; }
+
+  /* Problems */
+  .soft { background: var(--bg-soft); }
+  .grid-3 { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; }
+  .grid-2 { display: grid; grid-template-columns: repeat(2, 1fr); gap: 20px; }
+  .card { background: #fff; border: 1px solid var(--line); border-radius: var(--radius); padding: 28px; }
+  .card p:last-child { margin-bottom: 0; }
+  .icon { width: 46px; height: 46px; border-radius: 12px; display: grid; place-items: center; background: var(--brand-tint); color: var(--brand); margin-bottom: 16px; }
+  .icon svg { width: 24px; height: 24px; }
+  .head { margin-bottom: 44px; }
+
+  /* Services */
+  .service ul { margin: 14px 0 0; padding: 0; list-style: none; }
+  .service li { position: relative; padding-left: 24px; margin-bottom: 8px; font-size: 15px; color: var(--ink-soft); }
+  .service li::before { content: ""; position: absolute; left: 0; top: 8px; width: 12px; height: 7px; border-left: 2px solid var(--brand); border-bottom: 2px solid var(--brand); transform: rotate(-45deg); }
+
+  /* Pricing */
+  .price-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; align-items: stretch; }
+  .price { display: flex; flex-direction: column; background: #fff; border: 1px solid var(--line); border-radius: var(--radius); padding: 30px; position: relative; }
+  .price.featured { border: 2px solid var(--brand); box-shadow: var(--shadow); }
+  .price .tag { position: absolute; top: -13px; left: 30px; background: var(--accent); color: #3b2300; font-size: 12px; font-weight: 800; padding: 4px 12px; border-radius: 999px; letter-spacing: .03em; }
+  .price .for { font-size: 14px; margin-bottom: 18px; }
+  .amount { font-size: 34px; font-weight: 800; letter-spacing: -.02em; color: var(--ink); line-height: 1.1; }
+  .amount small { font-size: 14px; font-weight: 600; color: var(--ink-soft); display: block; margin-bottom: 4px; letter-spacing: 0; }
+  .price ul { margin: 22px 0 26px; padding: 0; list-style: none; flex: 1; }
+  .price li { position: relative; padding-left: 26px; margin-bottom: 10px; font-size: 15px; color: var(--ink-soft); }
+  .price li::before { content: ""; position: absolute; left: 2px; top: 8px; width: 12px; height: 7px; border-left: 2px solid var(--brand); border-bottom: 2px solid var(--brand); transform: rotate(-45deg); }
+  .price .btn { width: 100%; }
+  .note { font-size: 14px; margin-top: 22px; }
+
+  /* Portfolio */
+  .work { display: flex; flex-direction: column; background: #fff; border: 1px solid var(--line); border-radius: var(--radius); overflow: hidden; text-decoration: none; transition: transform .15s, box-shadow .15s; }
+  .work:hover { transform: translateY(-4px); box-shadow: var(--shadow); }
+  .work-img { width: 100%; height: auto; aspect-ratio: 16 / 10; object-fit: cover; object-position: top; border-bottom: 1px solid var(--line); background: var(--bg-soft); }
+  .work-top { aspect-ratio: 16 / 10; display: grid; place-items: center; color: #fff; font-size: 22px; font-weight: 800; letter-spacing: -.01em; padding: 20px; text-align: center; }
+  .work-body { padding: 20px 22px 22px; }
+  .work-body h3 { font-size: 17px; margin-bottom: 4px; }
+  .work-body p { font-size: 14px; margin: 0 0 12px; }
+  .chips { display: flex; flex-wrap: wrap; gap: 6px; }
+  .chip { font-size: 12px; font-weight: 700; padding: 4px 10px; border-radius: 999px; background: var(--bg-soft); color: var(--ink-soft); }
+  .work-link { font-size: 13px; font-weight: 700; color: var(--brand); margin-top: 14px; display: inline-block; }
+
+  /* Steps */
+  .steps { display: grid; grid-template-columns: repeat(4, 1fr); gap: 20px; counter-reset: step; }
+  .step { position: relative; padding: 26px; background: #fff; border: 1px solid var(--line); border-radius: var(--radius); }
+  .step::before { counter-increment: step; content: counter(step); width: 36px; height: 36px; border-radius: 50%; background: var(--brand); color: #fff; display: grid; place-items: center; font-weight: 800; margin-bottom: 14px; }
+  .step p { font-size: 15px; margin: 0; }
+
+  /* About */
+  .about { display: grid; grid-template-columns: .8fr 1.2fr; gap: 48px; align-items: center; }
+  .avatar { aspect-ratio: 1; max-width: 360px; border-radius: 24px; box-shadow: var(--shadow); overflow: hidden; }
+  .avatar svg { width: 100%; height: 100%; display: block; }
+  .stats { display: grid; grid-template-columns: repeat(3, 1fr); gap: 14px; margin-top: 22px; }
+  .stat { background: var(--bg-soft); border-radius: 12px; padding: 16px; }
+  .stat b { display: block; font-size: 26px; font-weight: 800; color: var(--brand); line-height: 1.1; }
+  .stat span { font-size: 13px; color: var(--ink-soft); font-weight: 600; }
+
+  /* FAQ */
+  .faq { max-width: 780px; margin: 0 auto; }
+  details { background: #fff; border: 1px solid var(--line); border-radius: 12px; padding: 0 22px; margin-bottom: 12px; }
+  summary { cursor: pointer; list-style: none; font-weight: 700; padding: 18px 30px 18px 0; position: relative; }
+  summary::-webkit-details-marker { display: none; }
+  summary::after { content: "+"; position: absolute; right: 0; top: 14px; font-size: 24px; font-weight: 500; color: var(--brand); }
+  details[open] summary::after { content: "−"; }
+  details p { padding-bottom: 18px; margin: 0; font-size: 15px; }
+
+  /* CTA */
+  .cta { background: var(--ink); color: #fff; border-radius: 24px; padding: 60px 40px; text-align: center; position: relative; overflow: hidden; }
+  .cta::before { content: ""; position: absolute; inset: auto -80px -160px auto; width: 360px; height: 360px; border-radius: 50%; background: var(--brand); opacity: .45; filter: blur(10px); }
+  .cta > * { position: relative; }
+  .cta h2 { color: #fff; }
+  .cta p { color: #c8d4d1; max-width: 560px; margin: 0 auto 26px; font-size: 17px; }
+  .cta-actions { display: flex; flex-wrap: wrap; gap: 12px; justify-content: center; }
+  .cta .btn-ghost { background: transparent; color: #fff; border-color: rgba(255,255,255,.3); }
+  .cta .btn-ghost:hover { border-color: #fff; color: #fff; }
+
+  .contact-list { list-style: none; padding: 0; margin: 30px auto 0; display: flex; flex-wrap: wrap; justify-content: center; gap: 12px 28px; font-size: 16px; }
+  .contact-list li { display: flex; align-items: center; gap: 10px; color: #e6eeec; text-align: left; }
+  .contact-list svg { width: 20px; height: 20px; color: #5eead4; flex: none; }
+  .contact-list a { color: #fff; font-weight: 700; text-decoration: none; border-bottom: 1px dashed rgba(255,255,255,.35); }
+  .contact-list a:hover { border-bottom-color: #fff; }
+  .contact-list small { display: block; font-size: 12px; color: #9fb3ae; font-weight: 600; line-height: 1.2; }
+  .foot-contact { display: flex; flex-wrap: wrap; gap: 6px 18px; margin-top: 4px; }
+  .foot-contact a { color: var(--ink); }
+  footer { padding: 36px 0 44px; font-size: 14px; color: var(--ink-soft); }
+  .foot { display: flex; flex-wrap: wrap; gap: 16px; justify-content: space-between; align-items: center; border-top: 1px solid var(--line); padding-top: 28px; }
+  .foot a { text-decoration: none; font-weight: 600; }
+  .foot a:hover { color: var(--brand); }
+  .foot-links { display: flex; flex-wrap: wrap; gap: 18px; }
+
+  .wa-float {
+    position: fixed; right: 18px; bottom: 18px; z-index: 60; width: 58px; height: 58px; border-radius: 50%;
+    background: #25d366; color: #fff; display: grid; place-items: center; box-shadow: 0 10px 24px -6px rgba(0,0,0,.35);
+    transition: transform .15s;
+  }
+  .wa-float:hover { transform: scale(1.07); }
+  .wa-float svg { width: 30px; height: 30px; }
+
+  :focus-visible { outline: 3px solid var(--accent); outline-offset: 3px; border-radius: 6px; }
+
+  /* Responsive */
+  @media (max-width: 960px) {
+    .hero-grid, .about { grid-template-columns: 1fr; gap: 48px; }
+    .mock { max-width: 520px; margin: 0 auto 30px; width: 100%; }
+    .grid-3, .price-grid { grid-template-columns: 1fr; }
+    .steps { grid-template-columns: repeat(2, 1fr); }
+    .price-grid { max-width: 520px; margin: 0 auto; }
+    .price.featured { order: -1; }
+    .avatar { max-width: 220px; font-size: 72px; }
+  }
+  @media (max-width: 760px) {
+    section { padding: 64px 0; }
+    .hero { padding: 40px 0 64px; }
+    .nav-links {
+      display: none; position: absolute; top: 68px; left: 0; right: 0; flex-direction: column; align-items: stretch;
+      gap: 0; background: #fff; border-bottom: 1px solid var(--line); padding: 8px 20px 18px;
+    }
+    .nav-links.open { display: flex; }
+    .nav-links a { padding: 12px 0; font-size: 16px; }
+    .nav-links .btn { margin-top: 8px; padding: 13px 18px; }
+    .menu-btn { display: block; }
+    .grid-2, .steps { grid-template-columns: 1fr; }
+    .phone { width: 104px; right: -6px; bottom: -28px; }
+    .badge-float { left: -6px; top: 14px; font-size: 12px; }
+    .stats { grid-template-columns: repeat(3, 1fr); gap: 8px; }
+    .stat { padding: 12px 10px; }
+    .stat b { font-size: 21px; }
+    .cta { padding: 46px 22px; border-radius: 20px; }
+    .hero-cta .btn { flex: 1 1 100%; }
+  }
+  @media (prefers-reduced-motion: reduce) {
+    html { scroll-behavior: auto; }
+    .btn, .work, .wa-float { transition: none; }
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="wrap nav">
+    <a href="#" class="logo" aria-label="Tapak Digital, ke atas"><span class="logo-mark"><svg viewBox="0 0 64 64" aria-hidden="true"><rect width="64" height="64" rx="16" fill="#0f766e"/><path d="M14 50V40.5a2.5 2.5 0 0 1 2.5-2.5H26V30.5a2.5 2.5 0 0 1 2.5-2.5H38V20.5a2.5 2.5 0 0 1 2.5-2.5h7a2.5 2.5 0 0 1 2.5 2.5V50z" fill="#fff"/><circle cx="20" cy="26" r="4.5" fill="#f59e0b"/></svg></span><b>tapak<span>digital</span></b></a>
+    <button class="menu-btn" aria-label="Buka menu" aria-expanded="false" aria-controls="nav-links">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
+    </button>
+    <nav class="nav-links" id="nav-links">
+      <a href="#layanan">Layanan</a>
+      <a href="#harga">Harga</a>
+      <a href="#portofolio">Portofolio</a>
+      <a href="#proses">Proses</a>
+      <a href="#faq">FAQ</a>
+      <a href="#kontak">Kontak</a>
+      <a class="btn btn-primary wa-link" href="#" data-msg="Halo Tapak Digital, saya ingin konsultasi pembuatan website.">Konsultasi Gratis</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <!-- HERO -->
+  <section class="hero">
+    <div class="wrap hero-grid">
+      <div>
+        <span class="eyebrow">Jasa Pembuatan Website</span>
+        <h1>Website profesional yang bikin bisnis Anda <em>dipercaya pelanggan</em></h1>
+        <p class="lead">Company profile, landing page UMKM, dan toko online. Dikerjakan langsung oleh developer berpengalaman 5 tahun yang pernah menangani sistem untuk perusahaan besar. Cepat, rapi, dan mudah ditemukan di Google.</p>
+        <div class="hero-cta">
+          <a class="btn btn-primary wa-link" href="#" data-msg="Halo Tapak Digital, saya ingin konsultasi pembuatan website untuk bisnis saya.">
+            <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm5.3 14.1c-.2.6-1.3 1.2-1.8 1.3-.5.1-1 .1-1.7-.1a15 15 0 0 1-1.5-.6 12 12 0 0 1-4.6-4.1c-.4-.5-1-1.5-1-2.8 0-1.3.7-2 1-2.3.2-.3.5-.3.7-.3h.5c.2 0 .4 0 .6.5l.8 2c.1.2.1.3 0 .5l-.3.5-.4.4c-.1.2-.3.3-.1.6.2.3.7 1.1 1.4 1.8 1 .9 1.8 1.1 2 1.3.3.1.4.1.6-.1l.8-1c.2-.3.4-.2.6-.1l1.9.9c.3.1.5.2.5.3.1.2.1.7-.1 1.3z"/></svg>
+            Konsultasi via WhatsApp
+          </a>
+          <a class="btn btn-ghost" href="#harga">Lihat Paket Harga</a>
+        </div>
+        <ul class="hero-points">
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12l5 5L20 7"/></svg>Konsultasi gratis</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12l5 5L20 7"/></svg>Tampil rapi di HP</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12l5 5L20 7"/></svg>Revisi sampai cocok</li>
+        </ul>
+      </div>
+
+      <div class="mock" aria-hidden="true">
+        <div class="browser">
+          <div class="browser-bar"><i></i><i></i><i></i><span>www.bisnisanda.com</span></div>
+          <div class="browser-body">
+            <div class="sk-hero"><b>Bisnis Anda, tampil profesional</b></div>
+            <div class="sk" style="width:70%"></div>
+            <div class="sk" style="width:90%"></div>
+            <div class="sk" style="width:55%"></div>
+            <div class="sk-row">
+              <div class="sk-card"><div class="sk"></div><div class="sk"></div><div class="sk" style="width:60%"></div></div>
+              <div class="sk-card"><div class="sk"></div><div class="sk"></div><div class="sk" style="width:60%"></div></div>
+              <div class="sk-card"><div class="sk"></div><div class="sk"></div><div class="sk" style="width:60%"></div></div>
+            </div>
+          </div>
+        </div>
+        <div class="phone">
+          <div class="sk-hero"><b>Pesan sekarang</b></div>
+          <div class="sk"></div><div class="sk" style="width:70%"></div><div class="sk" style="width:85%"></div>
+        </div>
+        <div class="badge-float"><span class="dot"></span>Online 24 jam</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- MASALAH -->
+  <section class="soft">
+    <div class="wrap">
+      <div class="head center">
+        <span class="eyebrow">Kenapa butuh website?</span>
+        <h2>Pelanggan mencari di Google dulu, baru membeli</h2>
+        <p class="lead">Media sosial saja belum cukup. Website membuat bisnis Anda terlihat serius, mudah ditemukan, dan bisa dihubungi kapan pun.</p>
+      </div>
+      <div class="grid-3">
+        <div class="card">
+          <div class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l8 4v5c0 5-3.5 8-8 9-4.5-1-8-4-8-9V7z"/><path d="M9 12l2 2 4-4"/></svg></div>
+          <h3>Lebih dipercaya</h3>
+          <p>Bisnis dengan website dan domain sendiri terlihat lebih kredibel di mata calon pelanggan, mitra, dan investor.</p>
+        </div>
+        <div class="card">
+          <div class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="7"/><path d="M21 21l-4.3-4.3"/></svg></div>
+          <h3>Mudah ditemukan</h3>
+          <p>Website yang disusun rapi untuk SEO membantu bisnis Anda muncul saat orang mencari produk atau layanan Anda.</p>
+        </div>
+        <div class="card">
+          <div class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg></div>
+          <h3>Jualan 24 jam</h3>
+          <p>Katalog, harga, lokasi, dan tombol WhatsApp selalu tersedia, bahkan saat Anda sedang tidur.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- LAYANAN -->
+  <section id="layanan">
+    <div class="wrap">
+      <div class="head">
+        <span class="eyebrow">Layanan</span>
+        <h2>Pilih sesuai kebutuhan bisnis Anda</h2>
+        <p class="lead">Dari usaha rumahan sampai perusahaan, saya bantu dari ide sampai website online.</p>
+      </div>
+      <div class="grid-3">
+        <div class="card service">
+          <div class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 9l9-6 9 6v11a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1z"/><path d="M9 21V12h6v9"/></svg></div>
+          <h3>Landing Page UMKM</h3>
+          <p>Satu halaman yang langsung mengarahkan pengunjung untuk menghubungi atau membeli.</p>
+          <ul><li>Cocok untuk kuliner, fashion, jasa</li><li>Tombol WhatsApp & Google Maps</li><li>Selesai cepat</li></ul>
+        </div>
+        <div class="card service">
+          <div class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="7" width="18" height="13" rx="2"/><path d="M8 7V5a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"/></svg></div>
+          <h3>Company Profile</h3>
+          <p>Website multi-halaman yang menampilkan profil, layanan, portofolio, dan kontak perusahaan.</p>
+          <ul><li>Profil, layanan, galeri, artikel</li><li>Bisa diubah sendiri lewat dashboard</li><li>Email bisnis profesional</li></ul>
+        </div>
+        <div class="card service">
+          <div class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="20" r="1.5"/><circle cx="18" cy="20" r="1.5"/><path d="M2 3h3l2.7 12.4a1 1 0 0 0 1 .8h9.6a1 1 0 0 0 1-.8L21 7H6"/></svg></div>
+          <h3>Toko Online & Custom</h3>
+          <p>Katalog produk, keranjang, ongkir, sampai sistem khusus sesuai alur bisnis Anda.</p>
+          <ul><li>Katalog & pemesanan</li><li>Dashboard admin</li><li>Integrasi pembayaran / sistem lain</li></ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- HARGA -->
+  <section id="harga" class="soft">
+    <div class="wrap">
+      <div class="head center">
+        <span class="eyebrow">Paket Harga</span>
+        <h2>Harga jelas, tanpa biaya tersembunyi</h2>
+        <p class="lead">Semua paket sudah termasuk desain responsif, setup, dan bantuan sampai website online.</p>
+      </div>
+      <div class="price-grid">
+        <div class="price">
+          <h3>UMKM Starter</h3>
+          <p class="for">Untuk usaha yang baru mulai online</p>
+          <div class="amount"><small>Mulai dari</small>Rp 750rb</div>
+          <ul>
+            <li>1 halaman landing page</li>
+            <li>Domain .my.id + hosting 1 tahun</li>
+            <li>Tombol WhatsApp & Google Maps</li>
+            <li>Tampil rapi di HP</li>
+            <li>2× revisi</li>
+          </ul>
+          <a class="btn btn-ghost wa-link" href="#" data-msg="Halo Tapak Digital, saya tertarik paket UMKM Starter.">Pilih Paket</a>
+        </div>
+        <div class="price featured">
+          <span class="tag">PALING DIMINATI</span>
+          <h3>Company Profile</h3>
+          <p class="for">Untuk perusahaan & bisnis yang berkembang</p>
+          <div class="amount"><small>Mulai dari</small>Rp 2,5jt</div>
+          <ul>
+            <li>Hingga 6 halaman</li>
+            <li>Domain .com / .co.id + hosting 1 tahun</li>
+            <li>Dashboard untuk ubah konten sendiri</li>
+            <li>SEO dasar & Google Search Console</li>
+            <li>Email bisnis (nama@bisnisanda.com)</li>
+            <li>3× revisi + gratis maintenance 1 bulan</li>
+          </ul>
+          <a class="btn btn-primary wa-link" href="#" data-msg="Halo Tapak Digital, saya tertarik paket Company Profile.">Pilih Paket</a>
+        </div>
+        <div class="price">
+          <h3>Toko Online / Custom</h3>
+          <p class="for">Untuk fitur khusus sesuai kebutuhan</p>
+          <div class="amount"><small>Mulai dari</small>Rp 5jt</div>
+          <ul>
+            <li>Katalog produk & pemesanan</li>
+            <li>Dashboard admin & laporan</li>
+            <li>Integrasi pembayaran / ongkir</li>
+            <li>Login pelanggan</li>
+            <li>Gratis maintenance 3 bulan</li>
+          </ul>
+          <a class="btn btn-ghost wa-link" href="#" data-msg="Halo Tapak Digital, saya ingin diskusi website toko online / custom.">Diskusikan Kebutuhan</a>
+        </div>
+      </div>
+      <p class="note center">Harga akhir menyesuaikan kebutuhan. Pembayaran bisa bertahap: DP 50%, pelunasan setelah website selesai dan Anda puas.</p>
+    </div>
+  </section>
+
+  <!-- PORTOFOLIO -->
+  <section id="portofolio">
+    <div class="wrap">
+      <div class="head">
+        <span class="eyebrow">Portofolio</span>
+        <h2>Website yang pernah saya kerjakan</h2>
+        <p class="lead">Beberapa proyek untuk perusahaan di Indonesia. Semuanya masih aktif dan bisa Anda kunjungi.</p>
+      </div>
+      <div class="grid-3">
+        <a class="work" href="https://castlerockasia.com" target="_blank" rel="noopener">
+          <img class="work-img" src="img/castlerock.jpg" alt="Tampilan halaman depan website Castlerock Asia" width="800" height="500" loading="lazy">
+          <div class="work-body"><h3>Castlerock Asia</h3><p>Website perusahaan dengan tema custom dan backend khusus.</p>
+            <div class="chips"><span class="chip">Company Profile</span><span class="chip">WordPress Custom</span></div>
+            <span class="work-link">castlerockasia.com ↗</span></div>
+        </a>
+        <a class="work" href="https://vinilon.com" target="_blank" rel="noopener">
+          <img class="work-img" src="img/vinilon.jpg" alt="Tampilan halaman depan website Vinilon Group" width="800" height="500" loading="lazy">
+          <div class="work-body"><h3>Vinilon Group</h3><p>Website grup perusahaan manufaktur, dibangun sesuai desain.</p>
+            <div class="chips"><span class="chip">Company Profile</span><span class="chip">WordPress Custom</span></div>
+            <span class="work-link">vinilon.com ↗</span></div>
+        </a>
+        <a class="work" href="https://antasariplace.com" target="_blank" rel="noopener">
+          <img class="work-img" src="img/antasari.jpg" alt="Tampilan halaman depan website Antasari Place" width="800" height="500" loading="lazy">
+          <div class="work-body"><h3>Antasari Place</h3><p>Website properti dengan tema custom sesuai desain klien.</p>
+            <div class="chips"><span class="chip">Properti</span><span class="chip">WordPress Custom</span></div>
+            <span class="work-link">antasariplace.com ↗</span></div>
+        </a>
+        <a class="work" href="https://www.taf.co.id" target="_blank" rel="noopener">
+          <img class="work-img" src="img/taf.jpg" alt="Tampilan halaman depan website Toyota Astra Financial Services" width="800" height="500" loading="lazy">
+          <div class="work-body"><h3>Toyota Astra Financial Services</h3><p>Pengembangan backend platform publik dan sistem admin.</p>
+            <div class="chips"><span class="chip">Enterprise</span><span class="chip">Laravel</span></div>
+            <span class="work-link">taf.co.id ↗</span></div>
+        </a>
+        <a class="work" href="https://binadigital.id" target="_blank" rel="noopener">
+          <img class="work-img" src="img/binadigital.jpg" alt="Tampilan halaman depan website Bina Digital" width="800" height="500" loading="lazy">
+          <div class="work-body"><h3>Bina Digital</h3><p>Website layanan perbankan digital dengan tema custom dan backend khusus.</p>
+            <div class="chips"><span class="chip">Perbankan Digital</span><span class="chip">WordPress Custom</span></div>
+            <span class="work-link">binadigital.id ↗</span></div>
+        </a>
+        <a class="work" href="https://github.com/bowouhuy" target="_blank" rel="noopener">
+          <div class="work-top" style="background:linear-gradient(135deg,#0f766e,#14b8a6)">Proyek Lainnya</div>
+          <div class="work-body"><h3>Aplikasi web custom</h3><p>Peta kereta real-time, dashboard, platform pesan multi-channel, dan lainnya.</p>
+            <div class="chips"><span class="chip">Laravel</span><span class="chip">Vue</span><span class="chip">Real-time</span></div>
+            <span class="work-link">github.com/bowouhuy ↗</span></div>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- PROSES -->
+  <section id="proses" class="soft">
+    <div class="wrap">
+      <div class="head center">
+        <span class="eyebrow">Cara Kerja</span>
+        <h2>4 langkah sampai website Anda online</h2>
+      </div>
+      <div class="steps">
+        <div class="step"><h3>Konsultasi</h3><p>Ceritakan bisnis dan kebutuhan Anda lewat WhatsApp. Gratis, tanpa kewajiban.</p></div>
+        <div class="step"><h3>Penawaran & DP</h3><p>Saya kirim rincian fitur, harga, dan jadwal. Mulai setelah DP 50%.</p></div>
+        <div class="step"><h3>Desain & Revisi</h3><p>Anda melihat progres secara langsung dan bisa meminta revisi.</p></div>
+        <div class="step"><h3>Online & Serah Terima</h3><p>Website tayang, Anda dapat akses penuh plus panduan cara mengelolanya.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- TENTANG -->
+  <section>
+    <div class="wrap about">
+      <div class="avatar" aria-hidden="true"><svg viewBox="0 0 64 64" aria-hidden="true"><rect width="64" height="64" rx="16" fill="#0f766e"/><path d="M14 50V40.5a2.5 2.5 0 0 1 2.5-2.5H26V30.5a2.5 2.5 0 0 1 2.5-2.5H38V20.5a2.5 2.5 0 0 1 2.5-2.5h7a2.5 2.5 0 0 1 2.5 2.5V50z" fill="#fff"/><circle cx="20" cy="26" r="4.5" fill="#f59e0b"/></svg></div>
+      <div>
+        <span class="eyebrow">Tentang Tapak Digital</span>
+        <h2>Dikerjakan langsung oleh developer, bukan dilempar ke pihak lain</h2>
+        <p>Tapak Digital adalah jasa pembuatan website dari Yogyakarta yang membantu bisnis Anda melangkah ke dunia online. Dikerjakan oleh web developer yang selama 5 tahun membangun website dan sistem untuk perusahaan seperti Toyota Astra Financial Services, Koperasi Astra, dan berbagai bisnis lokal.</p>
+        <p>Anda berkomunikasi langsung dengan orang yang membuat website Anda. Tidak ada perantara, tidak ada salah paham, dan Anda tahu persis progresnya.</p>
+        <div class="stats">
+          <div class="stat"><b>5 thn</b><span>Pengalaman</span></div>
+          <div class="stat"><b>9+</b><span>Proyek klien</span></div>
+          <div class="stat"><b>100%</b><span>Mobile-friendly</span></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section id="faq" class="soft">
+    <div class="wrap">
+      <div class="head center">
+        <span class="eyebrow">FAQ</span>
+        <h2>Pertanyaan yang sering ditanyakan</h2>
+      </div>
+      <div class="faq">
+        <details><summary>Berapa lama proses pembuatan website?</summary><p>Landing page UMKM umumnya 3 sampai 5 hari kerja, company profile 1 sampai 2 minggu, dan toko online/custom tergantung fitur. Jadwal pasti saya sampaikan di penawaran.</p></details>
+        <details><summary>Saya belum punya logo, foto, atau teks. Bisa dibantu?</summary><p>Bisa. Saya bantu menyusun teks dasar dan memakai foto/ilustrasi berlisensi. Untuk logo dan foto produk profesional bisa didiskusikan sebagai tambahan.</p></details>
+        <details><summary>Apakah saya bisa mengubah isi website sendiri?</summary><p>Untuk paket Company Profile ke atas, Anda mendapat dashboard untuk mengubah teks, gambar, dan artikel tanpa perlu coding, lengkap dengan panduan cara memakainya.</p></details>
+        <details><summary>Bagaimana sistem pembayarannya?</summary><p>DP 50% di awal, pelunasan 50% setelah website selesai dan Anda setuju dengan hasilnya, sebelum serah terima akses penuh.</p></details>
+        <details><summary>Setelah tahun pertama, apa yang perlu dibayar?</summary><p>Hanya perpanjangan domain dan hosting tahunan. Biayanya saya informasikan di awal agar tidak ada kejutan.</p></details>
+        <details><summary>Apakah website-nya akan muncul di Google?</summary><p>Website saya daftarkan ke Google Search Console dan disusun dengan SEO dasar. Posisi di hasil pencarian butuh waktu dan dipengaruhi persaingan, jadi saya tidak menjanjikan peringkat tertentu.</p></details>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA / KONTAK -->
+  <section id="kontak">
+    <div class="wrap">
+      <div class="cta">
+        <h2>Siap membawa bisnis Anda online?</h2>
+        <p>Ceritakan kebutuhan Anda, nanti saya balas dengan saran dan estimasi harga. Konsultasi gratis, tanpa kewajiban.</p>
+        <div class="cta-actions">
+          <a class="btn btn-primary wa-link" href="#" data-msg="Halo Tapak Digital, saya ingin konsultasi pembuatan website.">Chat WhatsApp Sekarang</a>
+          <a class="btn btn-ghost" href="mailto:kerjasamabowo@gmail.com?subject=Konsultasi%20Pembuatan%20Website">Kirim Email</a>
+        </div>
+        <ul class="contact-list">
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .4 1.9.7 2.8a2 2 0 0 1-.5 2.1L8 9.9a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.8.7a2 2 0 0 1 1.7 2z"/></svg>
+            <span><small>WhatsApp / Telepon</small><a href="tel:+6289602015445">0896-0201-5445</a></span></li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="M22 7l-10 6L2 7"/></svg>
+            <span><small>Email</small><a href="mailto:kerjasamabowo@gmail.com">kerjasamabowo@gmail.com</a></span></li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s7-6.2 7-12a7 7 0 0 0-14 0c0 5.8 7 12 7 12z"/><circle cx="12" cy="10" r="2.5"/></svg>
+            <span><small>Lokasi</small>Yogyakarta · melayani seluruh Indonesia</span></li>
+        </ul>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap foot">
+    <div>
+      <span>© <span id="year">2026</span> Tapak Digital · Yogyakarta, Indonesia</span>
+      <div class="foot-contact">
+        <span>WA/Telp: <a href="tel:+6289602015445">0896-0201-5445</a></span>
+        <span>Email: <a href="mailto:kerjasamabowo@gmail.com">kerjasamabowo@gmail.com</a></span>
+      </div>
+    </div>
+    <div class="foot-links">
+      <a class="wa-link" href="#" data-msg="Halo Tapak Digital, saya ingin konsultasi pembuatan website.">WhatsApp</a>
+      <a href="mailto:kerjasamabowo@gmail.com">Email</a>
+      <a href="https://github.com/bowouhuy" target="_blank" rel="noopener">GitHub</a>
+      <a href="https://www.linkedin.com/in/bowouhuy/" target="_blank" rel="noopener">LinkedIn</a>
+    </div>
+  </div>
+</footer>
+
+<a class="wa-float wa-link" href="#" data-msg="Halo Tapak Digital, saya ingin konsultasi pembuatan website." aria-label="Chat WhatsApp">
+  <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm5.3 14.1c-.2.6-1.3 1.2-1.8 1.3-.5.1-1 .1-1.7-.1a15 15 0 0 1-1.5-.6 12 12 0 0 1-4.6-4.1c-.4-.5-1-1.5-1-2.8 0-1.3.7-2 1-2.3.2-.3.5-.3.7-.3h.5c.2 0 .4 0 .6.5l.8 2c.1.2.1.3 0 .5l-.3.5-.4.4c-.1.2-.3.3-.1.6.2.3.7 1.1 1.4 1.8 1 .9 1.8 1.1 2 1.3.3.1.4.1.6-.1l.8-1c.2-.3.4-.2.6-.1l1.9.9c.3.1.5.2.5.3.1.2.1.7-.1 1.3z"/></svg>
+</a>
+
+<script>
+  // Nomor WhatsApp (format internasional, tanpa + atau 0 di depan)
+  var WA_NUMBER = "6289602015445";
+
+  document.querySelectorAll(".wa-link").forEach(function (a) {
+    var msg = a.getAttribute("data-msg") || "Halo Tapak Digital, saya ingin konsultasi pembuatan website.";
+    a.href = "https://wa.me/" + WA_NUMBER + "?text=" + encodeURIComponent(msg);
+    a.target = "_blank";
+    a.rel = "noopener";
+  });
+
+  var menuBtn = document.querySelector(".menu-btn");
+  var nav = document.getElementById("nav-links");
+  menuBtn.addEventListener("click", function () {
+    var open = nav.classList.toggle("open");
+    menuBtn.setAttribute("aria-expanded", open);
+  });
+  nav.querySelectorAll("a").forEach(function (a) {
+    a.addEventListener("click", function () {
+      nav.classList.remove("open");
+      menuBtn.setAttribute("aria-expanded", "false");
+    });
+  });
+
+  document.getElementById("year").textContent = new Date().getFullYear();
+</script>
+</body>
+</html>
