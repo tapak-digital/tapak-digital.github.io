@@ -39,10 +39,10 @@ Lalu aktifkan Pages seperti langkah 3 di atas.
 |---|---|
 | Nomor WhatsApp | `var WA_NUMBER = "6289602015445";` di `main.js` |
 | Nama brand | cari `Tapak Digital` di kedua file HTML |
-| Harga paket | bagian `<!-- HARGA -->` |
-| Portofolio | bagian `<!-- PORTOFOLIO -->`: tiap kartu satu `<a class="work">`; gambar di folder `img/` (800×500 JPG) |
+| Harga paket | bagian `<section id="pricing">` (EN) / `<section id="harga">` (ID) |
+| Portofolio | bagian `<section id="portfolio">` / `id="portofolio"`: tiap proyek satu `<a class="work">`; gambar di folder `img/` (800×500 JPG). 3 screenshot di bagian atas ada di `<div class="stairs">` |
 | Pesan otomatis WhatsApp | atribut `data-msg="..."` di tiap tombol |
-| Warna utama | `--brand` di `:root` paling atas `style.css` |
+| Warna & huruf | variabel di `:root` paling atas `style.css` (`--teal`, `--pine`, `--amber`, `--display`) |
 
 ## Opsional berikutnya
 - Domain sendiri (mis. `tapakdigital.my.id` / `tapakdigital.com`, cek ketersediaan dulu): tambahkan di **Settings → Pages → Custom domain**.
